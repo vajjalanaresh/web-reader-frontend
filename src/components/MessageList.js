@@ -21,6 +21,8 @@ export default function MessageList({ messages }) {
     <div
       ref={containerRef}
       style={{
+        backgroundImage: "url('../background.jpg')",
+
         height: 420,
         overflowY: "auto",
         border: "1px solid #eee",

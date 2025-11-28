@@ -22,7 +22,7 @@ export default function InputForm({ onSubmit }) {
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder="https://example.com/article"
-          style={{ width: "100%", padding: 8 }}
+          style={{ width: "-webkit-fill-available", padding: 8 }}
           required
         />
       </div>
@@ -31,7 +31,7 @@ export default function InputForm({ onSubmit }) {
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
           placeholder="Ask a question about the page"
-          style={{ width: "100%", padding: 8 }}
+          style={{ width: "-webkit-fill-available", padding: 8 }}
           required
         />
       </div>

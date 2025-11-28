@@ -10,23 +10,31 @@ export default function App() {
   return (
     <div
       style={{
-        maxWidth: 800,
-        margin: "24px auto",
-        fontFamily: "Inter, Arial, sans-serif",
+        backgroundImage: "url('../background.jpg')",
       }}
     >
-      <h1 style={{ marginBottom: 12 }}>Webpage Reader + Q&A</h1>
-      <p style={{ marginTop: 0, color: "#555" }}>
-        Paste a public article URL and ask a question.
-      </p>
+      <div
+        style={{
+          maxWidth: 800,
+          margin: "auto",
+          padding: "12px 12px",
+          fontFamily: "Inter, Arial, sans-serif",
+        }}
+      >
+        {/* <img src="/abstract-textured-backgound.jpg" /> */}
+        <h1 style={{ marginBottom: 12 }}>Webpage Reader + Q&A</h1>
+        <p style={{ marginTop: 0, color: "#555" }}>
+          Paste a public article URL and ask a question.
+        </p>
 
-      <div style={{ marginBottom: 12 }}>
-        <InputForm onSubmit={ask} />
+        <div style={{ marginBottom: 12 }}>
+          <InputForm onSubmit={ask} />
+        </div>
+
+        {loading && <Loader text="Fetching & answering — please wait..." />}
+
+        <MessageList messages={messages} />
       </div>
-
-      {loading && <Loader text="Fetching & answering — please wait..." />}
-
-      <MessageList messages={messages} />
     </div>
   );
 }
