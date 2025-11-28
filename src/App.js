@@ -22,7 +22,9 @@ export default function App() {
         }}
       >
         {/* <img src="/abstract-textured-backgound.jpg" /> */}
-        <h1 style={{ marginBottom: 12 }}>Webpage Reader + Q&A</h1>
+        <h1 style={{ marginBottom: 12, color: "white" }}>
+          Webpage Reader + Q&A
+        </h1>
         <p style={{ marginTop: 0, color: "#555" }}>
           Paste a public article URL and ask a question.
         </p>
@@ -31,7 +33,9 @@ export default function App() {
           <InputForm onSubmit={ask} />
         </div>
 
-        {loading && <Loader text="Fetching & answering — please wait..." />}
+        <span style={{ color: "white" }}>
+          {loading && <Loader text="Fetching & answering — please wait..." />}
+        </span>
 
         <MessageList messages={messages} />
       </div>
